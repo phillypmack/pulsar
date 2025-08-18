@@ -1,0 +1,203 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.task-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: #fafbfc;
+}
+
+.task-card:hover {
+  border-color: #cbd5e0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.task-card.completed {
+  opacity: 0.7;
+}
+
+.task-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.task-checkbox:hover {
+  border-color: #a0aec0;
+}
+
+.task-checkbox.completed {
+  background: #f0fff4;
+}
+
+.checkbox-check {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #667eea;
+}
+
+.task-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d3748;
+  line-height: 1.4;
+}
+
+.task-name.completed {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.task-notes {
+  margin: 0;
+  font-size: 14px;
+  color: #718096;
+  line-height: 1.5;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.task-assignee,
+.task-due,
+.task-start,
+.task-completed {
+  font-weight: 500;
+}
+
+.task-due.overdue {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.task-card:hover .task-actions {
+  opacity: 1;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background: #fed7d7;
+}
+
+.empty-tasks {
+  text-align: center;
+  padding: 80px 20px;
+  color: #718096;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-tasks h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.empty-tasks p {
+  margin: 0;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.completed-section {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .task-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .task-actions {
+    opacity: 1;
+  }
+}
+
